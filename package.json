@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/slc577/sportme/issues"
   },
-  "homepage": "https://github.com/slc577/sportme#readme"
+  "homepage": "https://github.com/slc577/sportme#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.76.0"
+  }
 }
