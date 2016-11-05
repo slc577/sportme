@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         if (text === 'Generic') {
-            sendGenericMessage(sender)
+            sendMehMessage(sender)
             //sendTextMessage(sender, "Wheee")
             continue
         }
@@ -59,7 +59,7 @@ const token = "EAAWquF1fimYBAD3SZBrTEXELeUC3GY4oydKcZCzTx3X22fvbcEvksysnx8DZApmQ
 
 
 function sendTextMessage(sender, text) {
-    let messageData = "Bleep"
+    let messageData = "Bleep"s
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
