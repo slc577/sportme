@@ -102,7 +102,7 @@ function sendGenericMessage(sender) {
                         "payload": "Payload for first element in a generic bubble",
                     }
                     ] //end buttons
-                },
+                },/*
                 {
                     "title": "Second card",
                     "subtitle": "Element #2 of an hscroll",
@@ -113,7 +113,7 @@ function sendGenericMessage(sender) {
                         "title": "Postback",
                         "payload": "Payload for second element in a generic bubble",
                 	}],
-                }
+                }*/
                 ]
             }
         }
