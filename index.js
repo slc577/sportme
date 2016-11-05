@@ -78,8 +78,8 @@ function sendTextMessage(sender, text) {
 }
 
 function sendMehMessage(sender) {
-    let messageData = {
-    }
+    let messageData = "Wat"
+    
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
