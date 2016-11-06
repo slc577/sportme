@@ -41,20 +41,9 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         if (text === 'Generic') {
-            sendGenericMssage(sender)
-            //sendTextMessage(sender, "Wheee")
+            sendGenericMessage(sender)
             continue
         }
-        /*else if (text == 'basketball')
-        {
-        	sendTextMessage(sender, "Basketball is aight I guess")
-        }*/
-        /*else if (text === 'basketball') {
-            var basketball = new Stitch('basketball')
-            var msg = basketball.getStory()
-            sendTextMessage(sender, msg)
-            continue
-        }*/
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
@@ -67,6 +56,7 @@ app.post('/webhook/', function (req, res) {
   })
 
 const token = "EAAWquF1fimYBAD3SZBrTEXELeUC3GY4oydKcZCzTx3X22fvbcEvksysnx8DZApmQQse2K39yFFTGv2LJKY9ioGYphdEoEO0XGEJj7zgEULuhftpouoUZByxDmtHHZCbgBPIap6PjPszLYVX0ZC307Ubm080MIb5X3LiNLLxoxaNAZDZD"
+
 
 
 function sendTextMessage(sender, text) {
@@ -87,27 +77,6 @@ function sendTextMessage(sender, text) {
         }
     })
 }
-
-/*function sendMehMessage(sender) {
-    let messageData = "Wat"
-    
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: {access_token:token},
-        method: 'POST',
-        json: {
-            recipient: {id:sender},
-            message: messageData,
-        }
-    }, function(error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    })
-}*/
-
 
 function sendGenericMessage(sender) {
     let messageData = {
