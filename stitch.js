@@ -1,4 +1,4 @@
-'use strict'
+/*'use strict'
 
 var method = Stitch.prototype;
 
@@ -23,4 +23,4 @@ method.getStory = function()
 	return "Move is " + this._sport.getMove();
 }
 
-module.exports = Stitch;
+module.exports = Stitch;*/
