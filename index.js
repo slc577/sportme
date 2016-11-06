@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const stitch = require('./stitch.js')
+//const stitch = require('./stitch.js')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -45,12 +45,16 @@ app.post('/webhook/', function (req, res) {
             //sendTextMessage(sender, "Wheee")
             continue
         }
-        else if (text === 'basketball') {
+        else if (text == 'basketball')
+        {
+        	sendTextMessage(sender, "Basketball is aight I guess")
+        }
+        /*else if (text === 'basketball') {
             var basketball = new Stitch('basketball')
             var msg = basketball.getStory()
             sendTextMessage(sender, msg)
             continue
-        }
+        }*/
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
