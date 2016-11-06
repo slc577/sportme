@@ -45,10 +45,10 @@ app.post('/webhook/', function (req, res) {
             //sendTextMessage(sender, "Wheee")
             continue
         }
-        else if (text == 'basketball')
+        /*else if (text == 'basketball')
         {
         	sendTextMessage(sender, "Basketball is aight I guess")
-        }
+        }*/
         /*else if (text === 'basketball') {
             var basketball = new Stitch('basketball')
             var msg = basketball.getStory()
