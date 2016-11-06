@@ -41,7 +41,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         if (text === 'Generic') {
-            sendMehMessage(sender)
+            sendGenericMssage(sender)
             //sendTextMessage(sender, "Wheee")
             continue
         }
@@ -88,7 +88,7 @@ function sendTextMessage(sender, text) {
     })
 }
 
-function sendMehMessage(sender) {
+/*function sendMehMessage(sender) {
     let messageData = "Wat"
     
     request({
@@ -106,7 +106,7 @@ function sendMehMessage(sender) {
             console.log('Error: ', response.body.error)
         }
     })
-}
+}*/
 
 
 function sendGenericMessage(sender) {
