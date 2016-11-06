@@ -4,8 +4,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const stitch = require('./stitch.js')
-//require('./stitch.js').get_move()
+// const stitch = require('./stitch.js')
+// require('./stitch.js').get_move()
+require('./stitch')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -46,7 +47,7 @@ app.post('/webhook/', function (req, res) {
             continue
         }
         else if (text === 'basketball') {
-            sendTextMessage(sender, stitch.get_move())
+            sendTextMessage(sender, "blech")
             continue
         }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
