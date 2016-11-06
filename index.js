@@ -4,6 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
+const stitch = require('./stitch.js')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -42,6 +43,12 @@ app.post('/webhook/', function (req, res) {
         if (text === 'Generic') {
             sendMehMessage(sender)
             //sendTextMessage(sender, "Wheee")
+            continue
+        }
+        else if (text === 'basketball') {
+            var basketball = new Stitch('basketball')
+            var msg = basketball.getStory()
+            sendTextMessage(sender, msg)
             continue
         }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
