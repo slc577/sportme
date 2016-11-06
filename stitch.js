@@ -1,6 +1,14 @@
-/*'use strict'
+'use strict'
 
-var method = Stitch.prototype;
+module.exports = 
+{
+	getMove: function()
+	{
+		return "dribble"
+	}
+}
+
+/*var method = Stitch.prototype;
 
 const Basketball = require("./basketball.js");
 
@@ -23,4 +31,4 @@ method.getStory = function()
 	return "Move is " + this._sport.getMove();
 }
 
-module.exports = Stitch;*/
+module.exports = Stitch;/*
