@@ -44,6 +44,10 @@ app.post('/webhook/', function (req, res) {
             sendGenericMessage(sender)
             continue
         }
+        else if (text === 'basketball') {
+            sendTextMessage(sender, "uhh")
+            continue
+        }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
@@ -61,7 +65,7 @@ const token = "EAAWquF1fimYBAD3SZBrTEXELeUC3GY4oydKcZCzTx3X22fvbcEvksysnx8DZApmQ
 
 function sendTextMessage(sender, text) {
     //let messageData = { text:text }
-    let messageData = "pls"
+    let messageData = { text:'pls' }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
