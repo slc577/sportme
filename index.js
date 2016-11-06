@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-var stitch = require('./stitch.js')
+const stitch = require('./stitch.js')
 //require('./stitch.js').get_move()
 
 app.set('port', (process.env.PORT || 5000))
