@@ -6,7 +6,7 @@ const request = require('request')
 const app = express()
 // const stitch = require('./stitch.js')
 // require('./stitch.js').get_move()
-require('./stitch')
+require('./node_modules/stitch')
 
 app.set('port', (process.env.PORT || 5000))
 
