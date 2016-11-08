@@ -45,6 +45,7 @@ app.post('/webhook/', function (req, res) {
         var names = ['Billy Bob', 'Bobby Joe', 'John', 'Mergatoid']
         var name = names[Math.floor(Math.random() * names.length)]
         var first
+        var second
 
         if (text === 'Generic') {
             sendGenericMessage(sender)
@@ -55,7 +56,7 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, first)
 
             second = stitch.get_second(name, 'baseball', 'baseball player')
-            //sendTextMessage(sender, second)
+            sendTextMessage(sender, second)
             
             continue
         }
@@ -64,7 +65,7 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, first)
             
             second = stitch.get_second(name, 'basketball', 'basketball player')
-            //sendTextMessage(sender, second)
+            sendTextMessage(sender, second)
             
             continue
         }
