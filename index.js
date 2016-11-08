@@ -44,15 +44,6 @@ app.post('/webhook/', function (req, res) {
         let text = event.message.text
         let name = stitch.get_name()
 
-        if (text === 'random') {
-            sendTextMessage(sender, 'whee')
-            setTimeout(function() {
-                sendTextMessage(sender, "wh00");
-            }, 1000)
-
-            continue
-        }
-
         if (text === 'Generic') {
             sendGenericMessage(sender)
             continue
@@ -60,14 +51,17 @@ app.post('/webhook/', function (req, res) {
         else if (text === 'baseball') {
             sendTextMessage(sender, stitch.get_first(name, 'baseball', 'baseball player'))
 
-            //sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'))
+            setTimeout(function() {
+                sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'));
+            }, 10)
             
             continue
         }
         else if (text === 'basketball') {
             sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player'))
-            
-            //sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'))
+            setTimeout(function() {
+                sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'));
+            }, 10)
             
             continue
         }
