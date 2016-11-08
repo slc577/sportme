@@ -57,7 +57,7 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, first)
 
             second = stitch.get_second(name, 'baseball', 'baseball player')
-            sendTextMessage(sender, second)
+            //sendTextMessage(sender, second)
             
             continue
         }
@@ -66,7 +66,7 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, first)
             
             second = stitch.get_second(name, 'basketball', 'basketball player')
-            sendTextMessage(sender, second)
+            //sendTextMessage(sender, second)
             
             continue
         }
