@@ -53,7 +53,7 @@ app.post('/webhook/', function (req, res) {
 
             setTimeout(function() {
                 sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'));
-            }, 10)
+            }, 50)
             
             continue
         }
@@ -61,7 +61,7 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player'))
             setTimeout(function() {
                 sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'));
-            }, 10)
+            }, 50)
             
             continue
         }
