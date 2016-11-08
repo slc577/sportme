@@ -43,10 +43,10 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.
 
-        var names = ['Billy Bob', 'Bobby Joe', 'John', 'Mergatoid']
-        var name = names[Math.floor(Math.random() * names.length)]
-        var first = ''
-        var second = ''
+        let var names = ['Billy Bob', 'Bobby Joe', 'John', 'Mergatoid']
+        let var name = names[Math.floor(Math.random() * names.length)]
+        let var first = ''
+        let var second = ''
 
         if (text === 'Generic') {
             sendGenericMessage(sender)
