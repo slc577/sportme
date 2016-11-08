@@ -46,7 +46,9 @@ app.post('/webhook/', function (req, res) {
 
         if (text === 'random') {
             sendTextMessage(sender, 'whee')
-            sendTextMessage(sender, 'wh00')
+            setTimeout(function() {
+                sendTextMessage(sender, "wh00");
+            }, 1000)
 
             continue
         }
