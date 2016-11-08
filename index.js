@@ -50,6 +50,13 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, "blech")
             continue
         }
+        else if (text === 'random') {
+            var favorites = ['blue', 'green', 'red', 'purple'];
+            var favorite = favorites[Math.floor(Math.random() * favorites.length)];
+            var postmessage = "hi my favorite site is " + favorite;
+            sendTextMessage(sender, postmessage)
+            continue
+        }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
