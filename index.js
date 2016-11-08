@@ -54,7 +54,7 @@ app.post('/webhook/', function (req, res) {
             // var favorites = ['blue', 'green', 'red', 'purple'];
             // var favorite = favorites[Math.floor(Math.random() * favorites.length)];
             // var postmessage = "hi my favorite site is " + favorite;
-            sendTextMessage(sender, stitch.get_story('basketball'))
+            sendTextMessage(sender, stitch.get_story('basketball', 'basketball player'))
             continue
         }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
