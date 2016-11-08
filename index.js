@@ -54,7 +54,7 @@ app.post('/webhook/', function (req, res) {
         }
         else if (text === 'baseball') {
             first = stitch.get_first(name, 'baseball', 'baseball player')
-            sendTextMessage(sender, first)
+            //sendTextMessage(sender, first)
 
             second = stitch.get_second(name, 'baseball', 'baseball player')
             //sendTextMessage(sender, second)
@@ -63,7 +63,7 @@ app.post('/webhook/', function (req, res) {
         }
         else if (text === 'basketball') {
             first = stitch.get_first(name, 'basketball', 'basketball player')
-            sendTextMessage(sender, first)
+            //sendTextMessage(sender, first)
             
             second = stitch.get_second(name, 'basketball', 'basketball player')
             //sendTextMessage(sender, second)
