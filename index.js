@@ -43,30 +43,22 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.
 
-        let names = ['Billy Bob', 'Bobby Joe', 'John', 'Mergatoid']
-        let name = names[Math.floor(Math.random() * names.length)]
-        let first = ''
-        let second = ''
 
         if (text === 'Generic') {
             sendGenericMessage(sender)
             continue
         }
         else if (text === 'baseball') {
-            first = stitch.get_first(name, 'baseball', 'baseball player')
-            //sendTextMessage(sender, first)
+            sendTextMessage(sender, stitch.get_first(name, 'baseball', 'baseball player'))
 
-            second = stitch.get_second(name, 'baseball', 'baseball player')
-            //sendTextMessage(sender, second)
+            sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'))
             
             continue
         }
         else if (text === 'basketball') {
-            first = stitch.get_first(name, 'basketball', 'basketball player')
-            //sendTextMessage(sender, first)
+            sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player')
             
             second = stitch.get_second(name, 'basketball', 'basketball player')
-            //sendTextMessage(sender, second)
             
             continue
         }
