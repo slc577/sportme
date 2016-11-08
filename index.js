@@ -55,14 +55,14 @@ app.post('/webhook/', function (req, res) {
         else if (text === 'baseball') {
             sendTextMessage(sender, stitch.get_first(name, 'baseball', 'baseball player'))
 
-            sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'))
+            //sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'))
             
             continue
         }
         else if (text === 'basketball') {
             sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player'))
             
-            sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'))
+            //sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'))
             
             continue
         }
