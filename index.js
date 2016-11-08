@@ -55,9 +55,9 @@ app.post('/webhook/', function (req, res) {
             continue
         }
         else if (text === 'basketball') {
-            sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player')
+            sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player'))
             
-            second = stitch.get_second(name, 'basketball', 'basketball player')
+            sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'))
             
             continue
         }
