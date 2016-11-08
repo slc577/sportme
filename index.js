@@ -43,8 +43,8 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
 
-        if (text = 'random') {
-            sendTextMessage(sender, 'hallo')
+        if (text === 'random') {
+            sendTextMessage(sender, 'whee')
             continue
         }
 
