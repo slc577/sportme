@@ -44,27 +44,163 @@ app.post('/webhook/', function (req, res) {
         let text = event.message.text
         let name = stitch.get_name()
 
-        if (text === 'Generic') {
-            sendGenericMessage(sender)
+        if (text.toLowerCase().includes('basketball')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'basketball', 'basketball player'))
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'basketball', 'basketball player'));
+            }, 50)
+            
             continue
         }
-        else if (text === 'baseball') {
-            sendTextMessage(sender, stitch.get_first(name, 'baseball', 'baseball player'))
+
+        else if (text.toLowerCase().includes('swim')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'swim', 'swimmer'))
 
             setTimeout(function() {
-                sendTextMessage(sender, stitch.get_second(name, 'baseball', 'baseball player'));
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'swim', 'swimmer'));
             }, 50)
             
             continue
         }
-        else if (text === 'basketball') {
-            sendTextMessage(sender, stitch.get_first(name, 'basketball', 'basketball player'))
+
+        else if (text.toLowerCase().includes('hockey')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'hockey', 'hockey player'))
+
             setTimeout(function() {
-                sendTextMessage(sender, stitch.get_second(name, 'basketball', 'basketball player'));
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'hockey', 'hockey player'));
             }, 50)
             
             continue
         }
+
+        else if (text.toLowerCase().includes('football')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'football', 'football player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'football', 'football player'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('golf')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'golf', 'golfer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'golf', 'golfer'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('track') || text.toLowerCase().includes('run')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'track', 'runner'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'track', 'runner'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('bowl')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'bowling', 'bowler'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'bowling', 'bowler'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('lacrosse')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'lacrosse', 'lacrosse player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'lacrosse', 'lacrosse player'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('sail')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'sailing', 'sailor'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'sailing', 'sailor'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('cross country')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'cross country', 'runner'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'cross country', 'runner'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('pingpong') || text.toLowerCase().includes('ping-pong') || text.toLowerCase().includes('ping pong')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'ping-pong', 'ping-pong player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'ping-pong', 'ping-pong player'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('beerpong') || text.toLowerCase().includes('beer-pong') || text.toLowerCase().includes('beer pong')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'beer-pong', 'beer-pong player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'beer-pong', 'beer-pong player'));
+            }, 50)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('baseball')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'baseball', 'baseball player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'baseball', 'baseball player'));
+            }, 50)
+            
+            continue
+        }
+
+
+
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
