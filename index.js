@@ -46,6 +46,8 @@ app.post('/webhook/', function (req, res) {
 
         if (text === 'random') {
             sendTextMessage(sender, 'whee')
+            sendTextMessage(sender, 'wh00')
+
             continue
         }
 
