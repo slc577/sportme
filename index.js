@@ -51,9 +51,6 @@ app.post('/webhook/', function (req, res) {
             continue
         }
         else if (text === 'basketball') {
-            // var favorites = ['blue', 'green', 'red', 'purple'];
-            // var favorite = favorites[Math.floor(Math.random() * favorites.length)];
-            // var postmessage = "hi my favorite site is " + favorite;
             sendTextMessage(sender, stitch.get_story('basketball', 'basketball player'))
             continue
         }
