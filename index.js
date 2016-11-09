@@ -404,6 +404,30 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('curl')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'curling', 'curler'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'curling', 'curler'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('shotput') || text.toLowerCase().includes('shot put')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'shot put', 'thrower'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'shot put', 'thrower'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('equest') || text.toLowerCase().includes('horse')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'horseback riding', 'equestrian'))
