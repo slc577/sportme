@@ -308,6 +308,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('crawl')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'crawling', 'crawler'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'crawling', 'crawler'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('sleep') || text.toLowerCase().includes('nap')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'napping', 'napper'))
@@ -644,6 +656,54 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('cycl') || text.toLowerCase().includes('bike')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'cycling', 'cyclist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'cycling', 'cyclist'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('pset') || text.toLowerCase().includes('study') || text.toLowerCase().includes('homew')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'homework', 'huge nerd'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'homework', 'huge nerd'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('netflix') || text.toLowerCase().includes('movie') || text.toLowerCase().includes('tv') || text.toLowerCase().includes('telev')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'netflix', 'binge watcher'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'netflix', 'binge watcher'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('drink')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'drinking', 'alcoholic'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'drinking', 'alcoholic'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('cricket')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'cricket', 'cricket player'))
@@ -740,6 +800,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('polo')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'polo', 'polo player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'polo', 'polo player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('div')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'diving', 'diver'))
@@ -747,6 +819,30 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'diving', 'diver'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('hornussen')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'hornussen', 'hornussen player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'hornussen', 'hornussen player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('weight')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'weight lifting', 'swoll'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'weight lifting', 'swoll'));
             }, time)
             
             continue
