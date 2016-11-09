@@ -404,6 +404,42 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('equest') || text.toLowerCase().includes('horse')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'horseback riding', 'equestrian'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'horseback riding', 'equestrian'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('water polo')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'water polo', 'water polo player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'water polo', 'water player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('quidditch')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'quidditch', 'magical quidditch player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'quidditch', 'magical quidditch player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('gymnas')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'gymnastics', 'gymnast'))
