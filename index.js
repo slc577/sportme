@@ -140,6 +140,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('frisbee')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'ultimate frisbee', 'frisbee player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'ultimate frisbee', 'frisbee player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('fenc')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'fencing', 'fencer'))
