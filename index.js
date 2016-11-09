@@ -164,6 +164,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('soccer')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'soccer', 'soccer player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'soccer', 'soccer player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('pistol')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'pistol', 'pistol shooter'))
