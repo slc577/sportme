@@ -104,6 +104,66 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('climb')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'climbing', 'climber'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'climbing', 'climber'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('surf')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'surfing', 'surfer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'surfing', 'surfer'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('fenc')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'fencing', 'fencer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'fencing', 'fencer'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('squash')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'squash', 'squash player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'squash', 'squash player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('softball')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'softball', 'softball player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'softball', 'softball player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('golf')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'golf', 'golfer'))
@@ -123,6 +183,30 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'track', 'runner'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('volleyball')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'volleyball', 'volleyball player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'volleyball', 'volleyball player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('wrestl')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'wrestling', 'wrestler'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'wrestling', 'wrestler'));
             }, time)
             
             continue
@@ -332,6 +416,54 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('crew') || text.toLowerCase().includes('row')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'crew', 'rower'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'crew', 'rower'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('car')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'racecar', 'racecar driver'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'racecar', 'racecar driver'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('drift')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'drifting', 'drifter'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'drifting', 'drifter'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('gymkhana')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'gymkhana', 'gymkhana driver'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'gymkhana', 'gymkhana driver'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('sail')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'sailing', 'sailor'))
@@ -387,6 +519,18 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'baseball', 'baseball player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('div')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'diving', 'diver'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'diving', 'diver'));
             }, time)
             
             continue
