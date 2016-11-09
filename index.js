@@ -43,6 +43,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         let name = stitch.get_name()
+        let time = 200
 
         if (text.toLowerCase().includes('basketball')) {
             sendTextMessage(sender,
@@ -50,7 +51,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'basketball', 'basketball player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -62,7 +63,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'swim', 'swimmer'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -74,7 +75,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     'After facing loss after loss, Tony must put his driving skills to the test in the final round. Will he emerge victorious, or will he go down in history as a failure?');
-            }, 100)
+            }, time)
             
             continue
         }
@@ -86,7 +87,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'hockey', 'hockey player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -98,7 +99,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'football', 'football player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -110,7 +111,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'golf', 'golfer'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -122,7 +123,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'track', 'runner'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -134,7 +135,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'marching band', 'marching band member'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -146,7 +147,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'badminton', 'badminton player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -158,7 +159,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'archery', 'archer'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -170,7 +171,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'pistol', 'pistol shooter'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -182,7 +183,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'napping', 'napper'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -194,7 +195,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'judo', 'martial artist'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -206,7 +207,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'taekwondo', 'martial artist'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -218,7 +219,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'karate', 'martial artist'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -230,7 +231,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'boxing', 'boxer'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -242,7 +243,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'speed walking', 'speed walker'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -254,7 +255,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'rifle', 'rifle shooter'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -266,7 +267,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'cooking', 'chef'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -278,7 +279,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'eating', 'glutton'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -290,7 +291,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'dance', 'dancer'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -302,7 +303,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'bowling', 'bowler'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -314,7 +315,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'lacrosse', 'lacrosse player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -326,7 +327,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'sailing', 'sailor'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -338,7 +339,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'cross country', 'runner'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -350,7 +351,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'ping-pong', 'ping-pong player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -362,7 +363,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'beer-pong', 'beer-pong player'));
-            }, 100)
+            }, time)
             
             continue
         }
@@ -374,7 +375,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'baseball', 'baseball player'));
-            }, 100)
+            }, time)
             
             continue
         }
