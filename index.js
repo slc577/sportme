@@ -50,7 +50,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'basketball', 'basketball player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -62,7 +62,19 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'swim', 'swimmer'));
-            }, 50)
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('robot')) {
+            sendTextMessage(sender,
+                'Tony is a young high schooler who likes power tools and shit. All of a sudden, Tony is appointed captain of the robotics team. Everything goes well, until the day of the robotics championship competition.')
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    'After facing loss after loss, Tony must put his driving skills to the test in the final round. Will he emerge victorious, or will he go down in history as a failure?');
+            }, 100)
             
             continue
         }
@@ -74,7 +86,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'hockey', 'hockey player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -86,7 +98,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'football', 'football player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -98,7 +110,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'golf', 'golfer'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -110,7 +122,175 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'track', 'runner'));
-            }, 50)
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('march')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'marching band', 'marching band member'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'marching band', 'marching band member'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('badminton')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'badminton', 'badminton player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'badminton', 'badminton player'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('archer')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'archery', 'archer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'archery', 'archer'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('pistol')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'pistol', 'pistol shooter'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'pistol', 'pistol shooter'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('sleep') || text.toLowerCase().includes('nap')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'napping', 'napper'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'napping', 'napper'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('judo')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'judo', 'martial artist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'judo', 'martial artist'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('tae kwon do') || text.toLowerCase().includes('taekwondo')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'taekwondo', 'martial artist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'taekwondo', 'martial artist'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('karate')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'karate', 'martial artist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'karate', 'martial artist'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('box')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'boxing', 'boxer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'boxing', 'boxer'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('walk')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'speed walking', 'speed walker'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'speed walking', 'speed walker'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('rifle')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'rifle', 'rifle shooter'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'rifle', 'rifle shooter'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('cook')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'cooking', 'chef'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'cooking', 'chef'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('eat') || text.toLowerCase().includes('food')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'eating', 'glutton'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'eating', 'glutton'));
+            }, 100)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('dance') || text.toLowerCase().includes('tango') || text.toLowerCase().includes('salsa')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'dance', 'dancer'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'dance', 'dancer'));
+            }, 100)
             
             continue
         }
@@ -122,7 +302,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'bowling', 'bowler'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -134,7 +314,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'lacrosse', 'lacrosse player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -146,7 +326,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'sailing', 'sailor'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -158,7 +338,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'cross country', 'runner'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -170,7 +350,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'ping-pong', 'ping-pong player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -182,7 +362,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'beer-pong', 'beer-pong player'));
-            }, 50)
+            }, 100)
             
             continue
         }
@@ -194,14 +374,14 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'baseball', 'baseball player'));
-            }, 50)
+            }, 100)
             
             continue
         }
 
 
 
-        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+        sendTextMessage(sender, "wtf is " + text.substring(0, 200))
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
