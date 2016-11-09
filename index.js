@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         let name = stitch.get_name()
-        let time = 100
+        let time = 150
 
         if (text.toLowerCase().includes('basketball')) {
             sendTextMessage(sender,
