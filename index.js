@@ -356,6 +356,42 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('checkers')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'checkers', 'checkers player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'checkers', 'checkers player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('chess')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'chess', 'chess player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'chess', 'chess player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('gymnas')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'gymnastics', 'gymnast'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'gymanistics', 'gymnast'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('box')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'boxing', 'boxer'))
