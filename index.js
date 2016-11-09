@@ -320,6 +320,30 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('kendo')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'kendo', 'martial artist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'kendo', 'martial artist'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('aikido')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'aikido', 'martial artist'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'aikido', 'martial artist'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('karate')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'karate', 'martial artist'))
@@ -507,6 +531,30 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'cricket', 'cricket player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('figure skat')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'figure skating', 'figure skater'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'figure skating', 'figure skater'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('ice skat')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'ice skating', 'ice skater'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'ice skating', 'ice skater'));
             }, time)
             
             continue
