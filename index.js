@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         let name = stitch.get_name()
-        let time = 200
+        let time = 100
 
         if (text.toLowerCase().includes('basketball')) {
             sendTextMessage(sender,
@@ -75,7 +75,7 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     'After facing loss after loss, Tony must put his driving skills to the test in the final round. Will he emerge victorious, or will he go down in history as a failure?');
-            }, time)
+            }, time + 100)
             
             continue
         }
