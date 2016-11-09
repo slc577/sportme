@@ -80,6 +80,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('tennis')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'tennis', 'tennis player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'tennis', 'tennis player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('hockey')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'hockey', 'hockey player'))
@@ -476,6 +488,30 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('rugby')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'rugby', 'rugby player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'rugby', 'rugby player'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('cricket')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'cricket', 'cricket player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'cricket', 'cricket player'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('cross country')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'cross country', 'runner'))
@@ -483,6 +519,18 @@ app.post('/webhook/', function (req, res) {
             setTimeout(function() {
                 sendTextMessage(sender,
                     stitch.get_second(name, 'cross country', 'runner'));
+            }, time)
+            
+            continue
+        }
+
+        else if (text.toLowerCase().includes('table tennis')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'table tennis', 'table tennis player'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'table tennis', 'table tennis player'));
             }, time)
             
             continue
