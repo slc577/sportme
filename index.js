@@ -248,6 +248,18 @@ app.post('/webhook/', function (req, res) {
             continue
         }
 
+        else if (text.toLowerCase().includes('juggl')) {
+            sendTextMessage(sender,
+                stitch.get_first(name, 'juggling', 'juggler'))
+
+            setTimeout(function() {
+                sendTextMessage(sender,
+                    stitch.get_second(name, 'juggling', 'juggler'));
+            }, time)
+            
+            continue
+        }
+
         else if (text.toLowerCase().includes('archer')) {
             sendTextMessage(sender,
                 stitch.get_first(name, 'archery', 'archer'))
